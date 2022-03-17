@@ -1,0 +1,43 @@
+<body>
+    <div id="wrapper">
+      <img id="swapImage" src="http://findicons.com/files/icons/129/soft_scraps/256/button_play_01.png" onclick="swapImage(); audioStatus()">
+      <audio id="natureSounds">
+        <source src="https://freemusicarchive.org/music/download/a3ba4af852c0d969a1a590982273fb4e5a6610ef">
+      </audio>
+  
+    </div>
+    <script>
+        var imageTracker = 'playImage';
+
+swapImage = function() {
+  var image = document.getElementById('swapImage');
+  if (imageTracker == 'playImage') {
+    image.src = 'http://findicons.com/files/icons/129/soft_scraps/256/button_pause_01.png';
+    imageTracker = 'stopImage';
+  } else {
+    image.src = 'http://findicons.com/files/icons/129/soft_scraps/256/button_play_01.png';
+    imageTracker = 'playImage';
+  }
+};
+
+var musicTracker = 'Raataan Lambiyan - Shershaah.mp3';
+
+audioStatus = function() {
+  var music = document.getElementById('natureSounds');
+  if (musicTracker == 'Raataan Lambiyan - Shershaah.mp3') {
+    music.play();
+    musicTracker = 'playMusic';
+  } else {
+    music.pause();
+    musicTracker = 'noMusic';
+  }
+};
+
+// demo playlist source 
+// https://freemusicarchive.org/music/download/989a766855bb379c6a4c83d59faefdbaf074371e
+// https://freemusicarchive.org/music/download/9af45bdd8cbb3e3935e5cb7c475355097468c321
+
+
+    </script>
+  </body>
+  
